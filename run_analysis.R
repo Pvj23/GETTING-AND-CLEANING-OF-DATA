@@ -71,3 +71,5 @@ head(dataset[, c(1:5)])
 tidydata <-aggregate(.~activity + subject_ID, dataset, mean)
 
 head(tidydata[, c(1:5)])
+
+write.table(tidydata, file = "tidydata.txt",row.name=FALSE)
